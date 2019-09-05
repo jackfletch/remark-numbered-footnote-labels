@@ -2,7 +2,8 @@
   "name": "remark-custom-footnotes",
   "version": "0.1.0",
   "description": "remark plugin for custom numbered footnotes",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
