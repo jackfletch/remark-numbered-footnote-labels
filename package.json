@@ -1,0 +1,15 @@
+{
+  "name": "remark-custom-footnotes",
+  "version": "0.1.0",
+  "description": "remark plugin for custom numbered footnotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "remark",
+    "remark-plugin"
+  ],
+  "author": "Jack Fletcher",
+  "license": "MIT"
+}
