@@ -1,5 +1,5 @@
 {
-  "name": "remark-custom-footnotes",
+  "name": "@jackfletch/remark-custom-footnotes",
   "version": "0.1.0",
   "description": "remark plugin for custom numbered footnotes",
   "main": "lib/index.js",
@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "@types/mdast": "^3.0.2",
     "@types/node": "^12.7.4",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
@@ -34,5 +35,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "unist-util-visit": "^2.0.0"
+  }
 }
