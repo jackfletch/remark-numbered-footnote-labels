@@ -1,7 +1,7 @@
 {
-  "name": "@jackfletch/remark-custom-footnotes",
-  "version": "0.1.0",
-  "description": "remark plugin for custom numbered footnotes",
+  "name": "remark-numbered-footnote-labels",
+  "version": "0.2.0",
+  "description": "remark plugin to label footnotes with numbers",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -18,7 +18,8 @@
   },
   "keywords": [
     "remark",
-    "remark-plugin"
+    "remark-plugin",
+    "footnotes"
   ],
   "author": "Jack Fletcher",
   "license": "MIT",
