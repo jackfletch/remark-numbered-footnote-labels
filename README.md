@@ -103,6 +103,10 @@ See [`support.md`][support] for ways to get help.
 This project has a [Code of Conduct][coc].
 By interacting with this repository, organisation, or community you agree to abide by its terms.
 
+## License
+
+[MIT][license] © [Jack Fletcher][author]
+
 [remark]: https://github.com/remarkjs/remark
 [remark-footnote-option]: https://github.com/remarkjs/remark/blob/master/packages/remark-parse/readme.md#optionsfootnotes
 [zestedesavoir/zmarkdown]: https://github.com/zestedesavoir/zmarkdown
