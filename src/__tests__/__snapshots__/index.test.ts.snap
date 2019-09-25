@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":false} footnote-split 1`] = `
+"<p>a<sup id=\\"fnref-first\\"><a href=\\"#fn-first\\" class=\\"footnote-ref\\">2</a></sup>b<sup id=\\"fnref-l1c11o10\\"><a href=\\"#fn-l1c11o10\\" class=\\"footnote-ref\\">1</a></sup>c<sup id=\\"fnref-third\\"><a href=\\"#fn-third\\" class=\\"footnote-ref\\">3</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-first\\">
+<p>first def<a href=\\"#fnref-first\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l1c11o10\\">
+second def
+<p><a href=\\"#fnref-l1c11o10\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-third\\">
+<p>third def<a href=\\"#fnref-third\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":false} footnotes 1`] = `
+"<p>This is the body with a footnote<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup> or two<sup id=\\"fnref-bar\\"><a href=\\"#fn-bar\\" class=\\"footnote-ref\\">2</a></sup> or more <sup id=\\"fnref-baz\\"><a href=\\"#fn-baz\\" class=\\"footnote-ref\\">3</a></sup> <sup id=\\"fnref-qux\\"><a href=\\"#fn-qux\\" class=\\"footnote-ref\\">4</a></sup> <sup id=\\"fnref-fiji\\"><a href=\\"#fn-fiji\\" class=\\"footnote-ref\\">5</a></sup>. One again: <sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>Also a reference that does not exist<sup id=\\"fnref-nope\\"><a href=\\"#fn-nope\\" class=\\"footnote-ref\\">6</a></sup>.</p>
+<p>Second line of first paragraph is not intended.
+Nor is third...</p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">
+<p>Footnote that ends with a list:</p>
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+</ul>
+<p><a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-bar\\">
+<blockquote>
+<p>This footnote is a blockquote.</p>
+</blockquote>
+<p><a href=\\"#fnref-bar\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-baz\\">
+<p>A simple oneliner.<a href=\\"#fnref-baz\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-qux\\">
+<p>A footnote with multiple paragraphs.</p>
+<p>Paragraph two.<a href=\\"#fnref-qux\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-fiji\\">
+<p>First line of first paragraph.<a href=\\"#fnref-fiji\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":false} regression-1 1`] = `
+"<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">MyNote<a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":false} regression-2 1`] = `
+"<p>1 <sup id=\\"fnref-l1c3o2\\"><a href=\\"#fn-l1c3o2\\" class=\\"footnote-ref\\">1</a></sup>
+2 <sup id=\\"fnref-l2c3o23\\"><a href=\\"#fn-l2c3o23\\" class=\\"footnote-ref\\">2</a></sup>
+3 <sup id=\\"fnref-l3c3o44\\"><a href=\\"#fn-l3c3o44\\" class=\\"footnote-ref\\">3</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+5 <sup id=\\"fnref-l6c3o81\\"><a href=\\"#fn-l6c3o81\\" class=\\"footnote-ref\\">4</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-l1c3o2\\">
+alpha bravo one
+<p><a href=\\"#fnref-l1c3o2\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l2c3o23\\">
+alpha bravo two
+<p><a href=\\"#fnref-l2c3o23\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l3c3o44\\">
+alpha bravo third
+<p><a href=\\"#fnref-l3c3o44\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-w\\">
+<p>foo<a href=\\"#fnref-w\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l6c3o81\\">
+alpha bravo fourth
+<p><a href=\\"#fnref-l6c3o81\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":true} footnote-split 1`] = `
+"<p>a<sup id=\\"fnref-first\\"><a href=\\"#fn-first\\" class=\\"footnote-ref\\">2</a></sup>b<sup id=\\"fnref-l1c11o10\\"><a href=\\"#fn-l1c11o10\\" class=\\"footnote-ref\\">1</a></sup>c<sup id=\\"fnref-third\\"><a href=\\"#fn-third\\" class=\\"footnote-ref\\">3</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-first\\">
+<p>first def<a href=\\"#fnref-first\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l1c11o10\\">
+second def
+<p><a href=\\"#fnref-l1c11o10\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-third\\">
+<p>third def<a href=\\"#fnref-third\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":true} footnotes 1`] = `
+"<p>This is the body with a footnote<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup> or two<sup id=\\"fnref-bar\\"><a href=\\"#fn-bar\\" class=\\"footnote-ref\\">2</a></sup> or more <sup id=\\"fnref-baz\\"><a href=\\"#fn-baz\\" class=\\"footnote-ref\\">3</a></sup> <sup id=\\"fnref-qux\\"><a href=\\"#fn-qux\\" class=\\"footnote-ref\\">4</a></sup> <sup id=\\"fnref-fiji\\"><a href=\\"#fn-fiji\\" class=\\"footnote-ref\\">5</a></sup>. One again: <sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>Also a reference that does not exist<sup id=\\"fnref-nope\\"><a href=\\"#fn-nope\\" class=\\"footnote-ref\\">6</a></sup>.</p>
+<p>Second line of first paragraph is not intended.
+Nor is third...</p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">
+<p>Footnote that ends with a list:</p>
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+</ul>
+<p><a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-bar\\">
+<blockquote>
+<p>This footnote is a blockquote.</p>
+</blockquote>
+<p><a href=\\"#fnref-bar\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-baz\\">
+<p>A simple oneliner.<a href=\\"#fnref-baz\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-qux\\">
+<p>A footnote with multiple paragraphs.</p>
+<p>Paragraph two.<a href=\\"#fnref-qux\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-fiji\\">
+<p>First line of first paragraph.<a href=\\"#fnref-fiji\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":true} regression-1 1`] = `
+"<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">MyNote<a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":false,"footnotes":true,"gfm":true} regression-2 1`] = `
+"<p>1 <sup id=\\"fnref-l1c3o2\\"><a href=\\"#fn-l1c3o2\\" class=\\"footnote-ref\\">1</a></sup>
+2 <sup id=\\"fnref-l2c3o23\\"><a href=\\"#fn-l2c3o23\\" class=\\"footnote-ref\\">2</a></sup>
+3 <sup id=\\"fnref-l3c3o44\\"><a href=\\"#fn-l3c3o44\\" class=\\"footnote-ref\\">3</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+5 <sup id=\\"fnref-l6c3o81\\"><a href=\\"#fn-l6c3o81\\" class=\\"footnote-ref\\">4</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-l1c3o2\\">
+alpha bravo one
+<p><a href=\\"#fnref-l1c3o2\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l2c3o23\\">
+alpha bravo two
+<p><a href=\\"#fnref-l2c3o23\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l3c3o44\\">
+alpha bravo third
+<p><a href=\\"#fnref-l3c3o44\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-w\\">
+<p>foo<a href=\\"#fnref-w\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l6c3o81\\">
+alpha bravo fourth
+<p><a href=\\"#fnref-l6c3o81\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":false} footnote-split 1`] = `
+"<p>a<sup id=\\"fnref-first\\"><a href=\\"#fn-first\\" class=\\"footnote-ref\\">2</a></sup>b<sup id=\\"fnref-l1c11o10\\"><a href=\\"#fn-l1c11o10\\" class=\\"footnote-ref\\">1</a></sup>c<sup id=\\"fnref-third\\"><a href=\\"#fn-third\\" class=\\"footnote-ref\\">3</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-first\\">
+<p>first def<a href=\\"#fnref-first\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l1c11o10\\">
+second def
+<p><a href=\\"#fnref-l1c11o10\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-third\\">
+<p>third def<a href=\\"#fnref-third\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":false} footnotes 1`] = `
+"<p>This is the body with a footnote<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup> or two<sup id=\\"fnref-bar\\"><a href=\\"#fn-bar\\" class=\\"footnote-ref\\">2</a></sup> or more <sup id=\\"fnref-baz\\"><a href=\\"#fn-baz\\" class=\\"footnote-ref\\">3</a></sup> <sup id=\\"fnref-qux\\"><a href=\\"#fn-qux\\" class=\\"footnote-ref\\">4</a></sup> <sup id=\\"fnref-fiji\\"><a href=\\"#fn-fiji\\" class=\\"footnote-ref\\">5</a></sup>. One again: <sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>Also a reference that does not exist<sup id=\\"fnref-nope\\"><a href=\\"#fn-nope\\" class=\\"footnote-ref\\">6</a></sup>.</p>
+<p>Second line of first paragraph is not intended.
+Nor is third...</p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">
+<p>Footnote that ends with a list:</p>
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+</ul>
+<p><a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-bar\\">
+<blockquote>
+<p>This footnote is a blockquote.</p>
+</blockquote>
+<p><a href=\\"#fnref-bar\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-baz\\">
+<p>A simple oneliner.<a href=\\"#fnref-baz\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-qux\\">
+<p>A footnote with multiple paragraphs.</p>
+<p>Paragraph two.<a href=\\"#fnref-qux\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-fiji\\">
+<p>First line of first paragraph.<a href=\\"#fnref-fiji\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":false} regression-1 1`] = `
+"<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">MyNote<a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":false} regression-2 1`] = `
+"<p>1 <sup id=\\"fnref-l1c3o2\\"><a href=\\"#fn-l1c3o2\\" class=\\"footnote-ref\\">1</a></sup>
+2 <sup id=\\"fnref-l2c3o23\\"><a href=\\"#fn-l2c3o23\\" class=\\"footnote-ref\\">2</a></sup>
+3 <sup id=\\"fnref-l3c3o44\\"><a href=\\"#fn-l3c3o44\\" class=\\"footnote-ref\\">3</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+5 <sup id=\\"fnref-l6c3o81\\"><a href=\\"#fn-l6c3o81\\" class=\\"footnote-ref\\">4</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-l1c3o2\\">
+alpha bravo one
+<p><a href=\\"#fnref-l1c3o2\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l2c3o23\\">
+alpha bravo two
+<p><a href=\\"#fnref-l2c3o23\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l3c3o44\\">
+alpha bravo third
+<p><a href=\\"#fnref-l3c3o44\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-w\\">
+<p>foo<a href=\\"#fnref-w\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l6c3o81\\">
+alpha bravo fourth
+<p><a href=\\"#fnref-l6c3o81\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":true} footnote-split 1`] = `
+"<p>a<sup id=\\"fnref-first\\"><a href=\\"#fn-first\\" class=\\"footnote-ref\\">2</a></sup>b<sup id=\\"fnref-l1c11o10\\"><a href=\\"#fn-l1c11o10\\" class=\\"footnote-ref\\">1</a></sup>c<sup id=\\"fnref-third\\"><a href=\\"#fn-third\\" class=\\"footnote-ref\\">3</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-first\\">
+<p>first def<a href=\\"#fnref-first\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l1c11o10\\">
+second def
+<p><a href=\\"#fnref-l1c11o10\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-third\\">
+<p>third def<a href=\\"#fnref-third\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":true} footnotes 1`] = `
+"<p>This is the body with a footnote<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup> or two<sup id=\\"fnref-bar\\"><a href=\\"#fn-bar\\" class=\\"footnote-ref\\">2</a></sup> or more <sup id=\\"fnref-baz\\"><a href=\\"#fn-baz\\" class=\\"footnote-ref\\">3</a></sup> <sup id=\\"fnref-qux\\"><a href=\\"#fn-qux\\" class=\\"footnote-ref\\">4</a></sup> <sup id=\\"fnref-fiji\\"><a href=\\"#fn-fiji\\" class=\\"footnote-ref\\">5</a></sup>. One again: <sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>Also a reference that does not exist<sup id=\\"fnref-nope\\"><a href=\\"#fn-nope\\" class=\\"footnote-ref\\">6</a></sup>.</p>
+<p>Second line of first paragraph is not intended.
+Nor is third...</p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">
+<p>Footnote that ends with a list:</p>
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+</ul>
+<p><a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-bar\\">
+<blockquote>
+<p>This footnote is a blockquote.</p>
+</blockquote>
+<p><a href=\\"#fnref-bar\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-baz\\">
+<p>A simple oneliner.<a href=\\"#fnref-baz\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-qux\\">
+<p>A footnote with multiple paragraphs.</p>
+<p>Paragraph two.<a href=\\"#fnref-qux\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-fiji\\">
+<p>First line of first paragraph.<a href=\\"#fnref-fiji\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":true} regression-1 1`] = `
+"<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<p>a<sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup><sup id=\\"fnref-foo\\"><a href=\\"#fn-foo\\" class=\\"footnote-ref\\">1</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-foo\\">MyNote<a href=\\"#fnref-foo\\" class=\\"footnote-backref\\">↩</a></li>
+</ol>
+</div>
+"
+`;
+
+exports[`{"commonmark":true,"footnotes":true,"gfm":true} regression-2 1`] = `
+"<p>1 <sup id=\\"fnref-l1c3o2\\"><a href=\\"#fn-l1c3o2\\" class=\\"footnote-ref\\">1</a></sup>
+2 <sup id=\\"fnref-l2c3o23\\"><a href=\\"#fn-l2c3o23\\" class=\\"footnote-ref\\">2</a></sup>
+3 <sup id=\\"fnref-l3c3o44\\"><a href=\\"#fn-l3c3o44\\" class=\\"footnote-ref\\">3</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+4 <sup id=\\"fnref-w\\"><a href=\\"#fn-w\\" class=\\"footnote-ref\\">5</a></sup>
+5 <sup id=\\"fnref-l6c3o81\\"><a href=\\"#fn-l6c3o81\\" class=\\"footnote-ref\\">4</a></sup></p>
+<div class=\\"footnotes\\">
+<hr>
+<ol>
+<li id=\\"fn-l1c3o2\\">
+alpha bravo one
+<p><a href=\\"#fnref-l1c3o2\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l2c3o23\\">
+alpha bravo two
+<p><a href=\\"#fnref-l2c3o23\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l3c3o44\\">
+alpha bravo third
+<p><a href=\\"#fnref-l3c3o44\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-w\\">
+<p>foo<a href=\\"#fnref-w\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+<li id=\\"fn-l6c3o81\\">
+alpha bravo fourth
+<p><a href=\\"#fnref-l6c3o81\\" class=\\"footnote-backref\\">↩</a></p>
+</li>
+</ol>
+</div>
+"
+`;
