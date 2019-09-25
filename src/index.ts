@@ -1,33 +1,33 @@
-import { FootnoteDefinition } from "mdast";
+import { Footnote, FootnoteDefinition, FootnoteReference } from "mdast";
+import { Plugin, Transformer } from "unified";
 import { Node, Parent, Point } from "unist";
 import visit = require("unist-util-visit");
-import {
-  Action,
-  ActionTuple,
-  Continue,
-  Exit,
-  Index,
-  Skip
-} from "unist-util-visit-parents";
 
-function plugin() {
+const plugin: Plugin = () => {
+  const transformer: Transformer = (tree, _file) => {
+    const footnotes: IFootnote = {};
+
+    visit<Footnote>(tree, "footnote", convert);
+
+    visit<FootnoteDefinition>(tree, "footnoteDefinition", createIds(footnotes));
+
+    visit<FootnoteReference>(tree, "footnoteReference", replaceIds(footnotes));
+
+    return tree;
+  };
+
   return transformer;
-}
+};
 
-interface ISomeObject {
+interface IFootnote {
   [key: string]: number;
 }
 
-function transformer(tree: Node) {
-  const footnotes: ISomeObject = {};
-  visit(tree, "footnote", convert);
-
-  visit(tree, "footnoteDefinition", createIds(footnotes));
-
-  visit(tree, "footnoteReference", replaceIds(footnotes));
-}
-
-function convert(node: Node, index: number, parent: Parent): Action {
+const convert: visit.Visitor<Footnote> = (
+  node: Node,
+  index: number,
+  parent: Parent
+) => {
   const id = autoId(node.position!.start);
   const footnoteDefinition = {
     children: node.children,
@@ -39,11 +39,14 @@ function convert(node: Node, index: number, parent: Parent): Action {
     type: "footnoteReference"
   };
   parent.children.splice(index, 1, footnoteReference, footnoteDefinition);
-  return true;
-}
+};
 
-function createIds(footnotes: ISomeObject) {
-  return (node: Node, index: number, parent: Parent) => {
+function createIds(footnotes: IFootnote) {
+  const visitor: visit.Visitor<FootnoteDefinition> = (
+    node: Node,
+    index: number,
+    parent: Parent
+  ) => {
     const identifier = String(node.identifier);
 
     if (!footnotes.hasOwnProperty(identifier)) {
@@ -52,10 +55,15 @@ function createIds(footnotes: ISomeObject) {
     // node.identifier = String(footnotes[identifier]);
     node.label = String(footnotes[identifier]);
   };
+  return visitor;
 }
 
-function replaceIds(footnotes: ISomeObject) {
-  return (node: Node, index: number, parent: Node) => {
+function replaceIds(footnotes: IFootnote) {
+  const visitor: visit.Visitor<FootnoteReference> = (
+    node: Node,
+    index: number,
+    parent: Parent
+  ) => {
     const identifier = String(node.identifier);
 
     if (!footnotes.hasOwnProperty(identifier)) {
@@ -64,6 +72,7 @@ function replaceIds(footnotes: ISomeObject) {
     // node.identifier = String(footnotes[identifier]);
     node.label = String(footnotes[identifier]);
   };
+  return visitor;
 }
 
 function autoId(node: Point): string {
