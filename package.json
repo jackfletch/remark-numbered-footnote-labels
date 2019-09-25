@@ -1,6 +1,6 @@
 {
   "name": "remark-numbered-footnote-labels",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "remark plugin to label footnotes with numbers",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
